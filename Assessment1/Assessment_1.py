@@ -1,10 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import random
 
 
 # # Task 2a
 
-# Define the function
+# # Define the function
 # def f(x):
 #     return np.exp(-x**2 / 3) + 3 * np.sin(x + np.pi / 4)
 
@@ -61,6 +62,7 @@ import matplotlib.pyplot as plt
 random_numbers = np.random.randint(1, 100, 1000)
 
 # Plot the histogram
+
 plt.hist(random_numbers, bins=20, color='green', edgecolor='black', density=True, alpha=0.6, label='Histogram')
 
 # Fit a normal distribution curve
@@ -71,13 +73,6 @@ normal_curve = (1 / (std_dev * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x - mean) 
 
 # Plot the normal distribution curve
 plt.plot(x, normal_curve, color='red', label='Normal Distribution')
-
-# Add labels and title
-plt.xlabel('Random Integers')
-plt.ylabel('Density')
-plt.title('1,000 Random Numbers with Normal Distribution Curve')
-plt.legend()
-plt.show()
 
 # Calculate descriptive statistics
 median = np.median(random_numbers)
@@ -90,3 +85,59 @@ print(f"Median: {median}")
 print(f"Standard Deviation: {std_dev}")
 print(f"Minimum Value: {min_value}")
 print(f"Maximum Value: {max_value}")
+# Add labels and title
+plt.xlabel('Random Integers')
+plt.ylabel('Density')
+plt.title('1,000 Random Numbers with Normal Distribution Curve')
+plt.legend()
+plt.show()
+
+
+
+
+# -----------------------------------------------------------------------------
+# Task 4
+
+# Bradley Howson
+# 2315432
+
+# # 1) Change myID to your own student ID. This MUST be your student ID.
+# myID = "2315432"  # Change this to your actual student ID
+
+# # 2) User input validation
+# while True:
+#     try:
+#         varCount = int(input("Enter an number equal or more than 50: "))
+#         if varCount >= 50:
+#             break
+#         else:
+#             print("Error: Please enter a number of 50 or more.")
+#     except ValueError:
+#         print("Error: wrong input. Please enter a valid number.")
+
+# # 3) randSeedNum
+# s_d = sum(int(d) for d in myID)  # Converts each character in myID to an integer and sums them
+# random.seed(s_d)
+
+# # 4) Random list creation
+# data = [random.randint(1, 200) for _ in range(varCount)]
+
+# # Compute the sum of data
+# data_sum = sum(data)
+
+# # Compute the mean of data
+# data_mean = data_sum / len(data)
+
+# # Compute the minimum and maximum of data
+# data_min = min(data)
+# data_max = max(data)
+
+# # Print the results
+# print(f"Sum: {data_sum}, Mean: {data_mean:.2f}, Min: {data_min}, Max: {data_max}")
+
+# # Plot a histogram of data
+# plt.hist(data, bins=10, edgecolor='black', alpha=0.7)
+# plt.xlabel("Value")
+# plt.ylabel("Frequency")
+# plt.title("Histogram of Random Data")
+# plt.show()
