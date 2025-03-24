@@ -5,57 +5,57 @@ import random
 
 # # Task 2a
 
-# # Define the function
-# def f(x):
-#     return np.exp(-x**2 / 3) + 3 * np.sin(x + np.pi / 4)
+# Define the function
+def f(x):
+    return np.exp(-x**2 / 3) + 3 * np.sin(x + np.pi / 4)
 
-# # Generate x values
-# x = np.linspace(-10, 10, 400)
+# Generate x values
+x = np.linspace(-10, 10, 400)
 
-# # show the y value
-# y = f(x)
+# show the y value
+y = f(x)
 
-# # Plot the function
-# plt.figure(figsize=(8, 5))
-# plt.plot(x, y, label='f(x)')
-# plt.xlabel('X-Axis')
-# plt.ylabel('Y-Axis')
-# plt.title('f(x) = exp(-x^2 / 3) + 3 * sin(x + pi / 4)')
-# plt.legend()
-# plt.grid()
-# plt.show()
+# Plot the function
+plt.figure(figsize=(8, 5))
+plt.plot(x, y, label='f(x)')
+plt.xlabel('X-Axis')
+plt.ylabel('Y-Axis')
+plt.title('f(x) = exp(-x^2 / 3) + 3 * sin(x + pi / 4)')
+plt.legend()
+plt.grid()
+plt.show()
 
 
 # -----------------------------------------------------------------------------
 # # Task 2b
 
-# # Define the function
-# def x(t):
-#     return 2 * np.sin(t) * np.exp(np.cos(t))
+# Define the function
+def x(t):
+    return 2 * np.sin(t) * np.exp(np.cos(t))
 
-# def y(t):
-#     return (-3/2) * np.cos(t) * np.exp(np.sin(2*t))
+def y(t):
+    return (-3/2) * np.cos(t) * np.exp(np.sin(2*t))
 
-# # Generate values of t from 0 to 2π
-# t_values = np.linspace(0, 2*np.pi, 400)  # 400 points for smooth curve
-# y_values = y(t_values)  # show y(t) values
+# Generate values of t from 0 to 2π
+t_values = np.linspace(0, 2*np.pi, 400)  # 400 points for smooth curve
+y_values = y(t_values)  # show y(t) values
 
-# # Generate t values
-# t = np.linspace(0, 2 * np.pi, 400)
+# Generate t values
+t = np.linspace(0, 2 * np.pi, 400)
 
-# # show the x and y value
-# x = x(t)
-# y = y(t)
+# show the x and y value
+x = x(t)
+y = y(t)
 
-# # Plot the function
-# plt.figure(figsize=(8, 5))
-# plt.plot(x, y, label='Parametric Curve')
-# plt.xlabel('X-Axis')
-# plt.ylabel('Y-Axis')
-# plt.title('f(x) = 2 * sin(t) * (exp * (cos * t))')
-# plt.legend()
-# plt.grid()
-# plt.show()
+# Plot the function
+plt.figure(figsize=(8, 5))
+plt.plot(x, y, label='Parametric Curve')
+plt.xlabel('X-Axis')
+plt.ylabel('Y-Axis')
+plt.title('f(x) = 2 * sin(t) * (exp * (cos * t))')
+plt.legend()
+plt.grid()
+plt.show()
 # -----------------------------------------------------------------------------
 # Task 3
 
@@ -101,43 +101,43 @@ plt.show()
 # Bradley Howson
 # 2315432
 
-# # 1) Change myID to your own student ID. This MUST be your student ID.
-# myID = "2315432"  # Change this to your actual student ID
+# 1) Change myID to your own student ID. This MUST be your student ID.
+myID = "2315432"  # Change this to your actual student ID
 
-# # 2) User input validation
-# while True:
-#     try:
-#         varCount = int(input("Enter an number equal or more than 50: "))
-#         if varCount >= 50:
-#             break
-#         else:
-#             print("Error: Please enter a number of 50 or more.")
-#     except ValueError:
-#         print("Error: wrong input. Please enter a valid number.")
+# 2) User input validation
+while True:
+    try:
+        varCount = int(input("Enter an number equal or more than 50: "))
+        if varCount >= 50:
+            break
+        else:
+            print("Error: Please enter a number of 50 or more.")
+    except ValueError:
+        print("Error: wrong input. Please enter a valid number.")
 
-# # 3) randSeedNum
-# s_d = sum(int(d) for d in myID)  # Converts each character in myID to an integer and sums them
-# random.seed(s_d)
+# 3) randSeedNum
+s_d = sum(int(d) for d in myID)  # Converts each character in myID to an integer and sums them
+random.seed(s_d)
 
-# # 4) Random list creation
-# data = [random.randint(1, 200) for _ in range(varCount)]
+# 4) Random list creation
+data = [random.randint(1, 200) for _ in range(varCount)]
 
-# # Compute the sum of data
-# data_sum = sum(data)
+# Compute the sum of data
+data_sum = sum(data)
 
-# # Compute the mean of data
-# data_mean = data_sum / len(data)
+# Compute the mean of data
+data_mean = data_sum / len(data)
 
-# # Compute the minimum and maximum of data
-# data_min = min(data)
-# data_max = max(data)
+# Compute the minimum and maximum of data
+data_min = min(data)
+data_max = max(data)
 
-# # Print the results
-# print(f"Sum: {data_sum}, Mean: {data_mean:.2f}, Min: {data_min}, Max: {data_max}")
+# Print the results
+print(f"Sum: {data_sum}, Mean: {data_mean:.2f}, Min: {data_min}, Max: {data_max}")
 
-# # Plot a histogram of data
-# plt.hist(data, bins=10, edgecolor='black', alpha=0.7)
-# plt.xlabel("Value")
-# plt.ylabel("Frequency")
-# plt.title("Histogram of Random Data")
-# plt.show()
+# Plot a histogram of data
+plt.hist(data, bins=10, edgecolor='black', alpha=0.7)
+plt.xlabel("Value")
+plt.ylabel("Frequency")
+plt.title("Histogram of Random Data")
+plt.show()
